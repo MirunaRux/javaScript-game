@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Top secret recipes - GAME</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<meta name = "author" content="MIRUNA BUDOIAS"/>
+		<script src = "javascript/joc.js"></script>
+		<link type="text/css" rel="stylesheet" href="joc.css"/>
+	</head>
+	<body>
+		<form id = "setari" action="javascript:void(0);">
+			<h2>Info about you</h2>
+			
+			<div class = "form">
+				<label for = "name">Name</label>
+			    <input type="text" class = "form" id="name"/>
+			</div>
+
+			<div class = "form">
+			    <label for = "about">About</label>
+			    <textarea class = "form" id="about" rows="3"></textarea>
+			</div>
+
+			<div class = "form">
+			    <label class = "check">
+				    <input type="radio" id="level" name="choice" 
+				           value="beginner">
+				    beginner
+				</label>
+			</div>
+
+			<div class = "form">
+				<label class = "check">
+				    <input type="radio" id="level" name="choice" 
+				    	   value="medium">
+				    medium
+			    </label>
+			</div>
+
+			<div class = "form">
+				<label class = "check">
+			    	<input type="radio" id="level" name="choice" 
+			    		   value="advanced">
+			    	advanced
+				</label>
+		    </div>
+
+		    <div class = "form">
+		    	<label for = "like">How much do you like pizza ?</label>
+		    	<input type="range" class="control" id = "like" min="1" max="10" 
+		    		   step="1"/>
+		    </div>
+
+		    <div class = "form">
+		    	<label for = "pizzaNames">What is your favorite pizza ?
+		    	</label>
+			    <select class = "control" id = "pizzaNames">
+					  <option value="1">Pizza Oquatro Formaggi</option>
+					  <option value="2">Pizza Polo</option>
+					  <option value="3">Pizza Diavola</option>
+					  <option value="4">Pizza Quatro Stagioni</option>
+				</select>
+			</div>
+
+			<div class = "form">
+				<label for  = "sauce">Choose your favorite sauces :
+				</label>
+				<select multiple class = "control" id = "sauce">
+				</select>
+			</div>
+
+			<div class = "form">
+				 <input type = "checkbox" class = "check" name = "agree"
+				 value = "1">
+				 Agree with terms and conditions
+			</div>
+
+			<button id = "game" class = "button">PLAY !</button>
+		</form>
+
+        <div id = "container">
+	
+			<canvas id = "myCanvas" width = "300" height = "300">
+			</canvas>
+		</div>
+
+		<script src = "javascript/canvas.js"></script>
+
+		<img src="imagini/alimente/pui.png" id="pui" 
+		     onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+		<br/>
+		<br/>
+
+        <div id = "pizza">
+			<button onclick="add()">MORE PIZZA !</button>
+			<button onclick="remove()">LESS PIZZA !</button>
+		</div>
+
+		<ul id = "list">
+		</ul>
+
+		<div id = "container2">
+			<canvas id="myCanvas2" width="500" height="500"></canvas>
+		</div>
+		<script src = "javascript/test.js"></script>
+	</body>
+</html>
